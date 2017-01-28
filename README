@@ -1,0 +1,6 @@
+Workflow steps
+
+1. Hot key press - Ctrl V for Windows and Cmd V for Mac
+2. Voice recognition toggles on hot key press
+3. The recognized text can be used to fill a textbox/textarea or filter a select tag
+4. voice commands that can be used to change fields

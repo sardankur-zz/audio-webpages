@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+	"name": "NoFingers",
+	"description": "This extension listens to your voice to fill a web page data.",
+  "version": "1.0",
+  "commands": {
+	"toggle-voice-recognition": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+K",
+              "mac": "Command+Shift+K"
+            },
+            "description": "Toggle Voice Recognition"
+          }
+  },
+  "permissions": [
+    	"activeTab"
+  ],
+  "background": {
+    "matches" : ["http://*/*", "https://*/*"],  
+    "scripts": ["background.js"],
+	  "persistent": true
+	},
+    "content_scripts": [{            	
+    		"matches" : ["http://*/*", "https://*/*"],	
+        "all_frames": true,
+      	"js": ["inject.js"]
+    	}
+  	],
+  	"browser_action": {
+    	"default_icon": "default_icon.png"   	
+  	}
+ }
